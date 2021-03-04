@@ -6,7 +6,9 @@ export const NavBar = styled.nav`
   justify-content: space-between;
   height: 50px;
   align-items: center;
-  margin: 0 5px;
+  @media screen and (max-width: 800px) {
+    margin: 0 5px;
+  }
 `;
 
 export const Header = styled.header`
@@ -31,7 +33,7 @@ export const Logo = styled.span`
 
 export const IconWrapper = styled.div`
   display: none;
-  color: white;
+  color: #f93737;
 
   @media screen and (max-width: 600px) {
     display: block;

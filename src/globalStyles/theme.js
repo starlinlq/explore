@@ -8,6 +8,7 @@ body {
     padding: 0;
     box-sizing: border-box;
     position: relative;
+    
 }
 a:link{
   text-decoration: none!important;
@@ -21,6 +22,7 @@ export const theme = {
   primaryFontColor: "white",
   secondaryFontColor: "#c8bdd4",
   buttonColor: "#191e37",
+  backgroundColor: "#191e37",
 };
 
 export const Container = styled.div`
