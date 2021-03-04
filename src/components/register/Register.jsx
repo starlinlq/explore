@@ -1,4 +1,6 @@
 import { useForm } from "react-hook-form";
+import { Link } from "react-router-dom";
+import { useDispatch } from "react-redux";
 import {
   Form,
   Wrapper,
@@ -7,45 +9,81 @@ import {
   FormWrapper,
   Label,
   Error,
+  Section,
+  InputWrapper,
+  Title,
+  ImgWrapper,
 } from "./register.style";
-import { Container, Button } from "../../globalStyles/theme";
-import mg from "../../images/register.jpg";
-function Register() {
-  const { register, handleSubmit, watch, errors, clearErrors } = useForm();
+import { Container, Button, Span } from "../../globalStyles/theme";
+import mg from "../../images/register2.jpg";
+import { HiOutlineMail } from "react-icons/hi";
+import { RiLockPasswordLine, RiContactsFill } from "react-icons/ri";
 
-  function onSubmit() {
+function Register() {
+  const { register, handleSubmit, errors, clearErrors } = useForm();
+  const dispatch = useDispatch();
+
+  function onSubmit(data) {
+    dispatch({ type: "register", payload: data });
     clearErrors();
   }
   return (
     <Wrapper>
       <Container>
-        <FormWrapper>
-          <Img src={mg} />
-          <Form onSubmit={handleSubmit(onSubmit)}>
-            <Label>name</Label>
-            <Input
-              placeholder="Name"
-              name="name"
-              ref={register({
-                required: true,
-                maxLength: 10,
-                pattern: /^[A-Za-z]+$/i,
-              })}
-            />
-            {errors.name && <Error>name is required</Error>}
+        <Section>
+          <ImgWrapper>
+            <Img src={mg} />
+          </ImgWrapper>
+          <FormWrapper>
+            <Title>Register now</Title>
+            <Form onSubmit={handleSubmit(onSubmit)}>
+              <Label>Name</Label>
+              {errors.name && <Error>{errors.message}</Error>}
+              <InputWrapper>
+                <RiContactsFill />
+                <Input
+                  placeholder="name"
+                  name="name"
+                  ref={register({
+                    required: "true",
+                    maxLength: {
+                      value: 10,
+                      message: "name should be 10 character or less",
+                    },
+                    pattern: /^[A-Za-z]+$/i,
+                  })}
+                />
+              </InputWrapper>
+              <Label>Email</Label>
+              {errors.email && <Error>name is required</Error>}
+              <InputWrapper>
+                <HiOutlineMail />
+                <Input
+                  type="email"
+                  placeholder="email"
+                  name="email"
+                  ref={register({ required: true })}
+                />
+              </InputWrapper>
 
-            <Label>email</Label>
-            <Input placeholder="Email" name="email" ref={register({})} />
-            {errors.email && <Error>name is required</Error>}
-            <Label>password</Label>
-            <Input placeholder="Password" />
-            {errors.password && <Error>name is required</Error>}
-            <Label>Confirm Password</Label>
-            <Input placeholder="Confirm password" />
-            {errors.confirmPassword && <Error>name is required</Error>}
-            <Button type="submit">Submit</Button>
-          </Form>
-        </FormWrapper>
+              <Label>Password</Label>
+              <InputWrapper>
+                <RiLockPasswordLine />
+                <Input
+                  type="password"
+                  placeholder="password"
+                  name="password"
+                  ref={register({ required: true })}
+                />
+                {errors.password && <Error>name is required</Error>}
+              </InputWrapper>
+              <Button type="submit">Submit</Button>
+            </Form>
+            <Link to="login">
+              <Span>Already have an account, Log in</Span>
+            </Link>
+          </FormWrapper>
+        </Section>
       </Container>
     </Wrapper>
   );

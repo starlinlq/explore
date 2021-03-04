@@ -8,11 +8,17 @@ body {
     padding: 0;
     box-sizing: border-box;
     position: relative;
+    overflow-x: hidden !important;
     
 }
 a:link{
   text-decoration: none!important;
   cursor: pointer;
+}
+
+svg{
+  font-size: 25px;
+  color: lightgray;
 }
 
 
@@ -39,7 +45,7 @@ export const Container = styled.div`
     width: 540px;
   }
   @media screen and (max-width: 576px) {
-    width: 100%;
+    width: 90%;
   }
 `;
 
@@ -56,5 +62,14 @@ export const Button = styled.button`
 
   &:hover {
     background-color: #191e37;
+  }
+`;
+
+export const Span = styled.span`
+  color: blue;
+  margin-top: 15px;
+
+  &:hover {
+    color: #191e37;
   }
 `;

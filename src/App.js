@@ -1,6 +1,6 @@
 import { GlobalStyle } from "./globalStyles/theme";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import { Nav, Home, Register } from "./components";
+import { Nav, Home, Register, Login } from "./components";
 function App() {
   return (
     <>
@@ -10,6 +10,9 @@ function App() {
         <Switch>
           <Route path="/register">
             <Register />
+          </Route>
+          <Route path="/login">
+            <Login />
           </Route>
           <Route path="/">
             <Home />
