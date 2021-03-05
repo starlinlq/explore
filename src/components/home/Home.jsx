@@ -17,7 +17,7 @@ const Home = () => {
         <Section>
           <div style={{ textAlign: "center" }}>
             <Title fontSize="80px" fontMobile="30px">
-              Canada Has Never Been So Afoordable
+              Exploring Has Never Been So Afoordable
             </Title>
             <SubTitle fontSize="25px" fontMobile="20px">
               Discover Canada, Choose the best programs, guides, hotels, and

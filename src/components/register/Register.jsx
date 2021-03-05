@@ -1,6 +1,6 @@
 import { useForm } from "react-hook-form";
-import { Link } from "react-router-dom";
-import { useDispatch } from "react-redux";
+import { Link, useHistory } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
 import {
   Form,
   Wrapper,
@@ -18,13 +18,19 @@ import { Container, Button, Span } from "../../globalStyles/theme";
 import mg from "../../images/register2.jpg";
 import { HiOutlineMail } from "react-icons/hi";
 import { RiLockPasswordLine, RiContactsFill } from "react-icons/ri";
+import { register_user } from "../../stores/user/actions";
 
 function Register() {
+  const history = useHistory();
   const { register, handleSubmit, errors, clearErrors } = useForm();
   const dispatch = useDispatch();
+  const { user } = useSelector((state) => state.user);
 
   function onSubmit(data) {
-    dispatch({ type: "register", payload: data });
+    dispatch(register_user(data));
+    if (user) {
+      history.push("/");
+    }
     clearErrors();
   }
   return (

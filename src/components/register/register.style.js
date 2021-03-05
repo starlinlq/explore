@@ -17,7 +17,7 @@ export const Input = styled.input`
   margin-left: 10px;
 `;
 export const Img = styled.img`
-  object-fit: fill;
+  object-fit: cover;
   object-position: center;
   border-bottom-left-radius: 5px;
   width: 100%;

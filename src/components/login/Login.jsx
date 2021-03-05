@@ -17,12 +17,15 @@ import { Container, Button, Span } from "../../globalStyles/theme";
 import mg from "../../images/register1.jpg";
 import { HiOutlineMail } from "react-icons/hi";
 import { RiLockPasswordLine } from "react-icons/ri";
+import { login_user } from "../../stores/user/actions";
+import { useDispatch } from "react-redux";
 
 function Register() {
   const { register, handleSubmit, errors, clearErrors } = useForm();
+  const dispatch = useDispatch();
 
   function onSubmit(data) {
-    console.log(data);
+    dispatch(login_user(data));
     clearErrors();
   }
   return (
