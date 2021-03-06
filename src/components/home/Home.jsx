@@ -19,7 +19,7 @@ const Home = () => {
             <Title fontSize="80px" fontMobile="30px">
               Exploring Has Never Been So Afoordable
             </Title>
-            <SubTitle fontSize="25px" fontMobile="20px">
+            <SubTitle fontSize="25px" fontMobile="18px">
               Discover Canada, Choose the best programs, guides, hotels, and
               restaurants.
             </SubTitle>

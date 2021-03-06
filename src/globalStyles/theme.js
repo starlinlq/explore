@@ -4,6 +4,7 @@ export const GlobalStyle = createGlobalStyle`
 
 
 body {
+  background: rgba(25, 30, 55, 1);
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -20,6 +21,14 @@ svg{
   font-size: 25px;
   color: lightgray;
 }
+
+p, h1, span{
+  letter-spacing: 0.7px;
+}
+
+
+
+
 
 
 `;
@@ -56,9 +65,14 @@ export const Button = styled.button`
   height: 50px;
   color: ${({ theme }) => theme.primaryFontColor};
   padding: 0 45px;
-  font-weight: 500;
+  font-weight: 400;
   cursor: pointer;
   transition: 1s;
+
+  @media screen and (max-width: 600px) {
+    padding: 0 30px;
+    height: 40px;
+  }
 
   &:hover {
     background-color: #191e37;

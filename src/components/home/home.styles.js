@@ -1,11 +1,17 @@
 import styled from "styled-components";
 import img from "../../images/home.jpg";
 export const Wrapper = styled.div`
-  background-image: url(${img});
   height: 100vh;
   background-position: center;
   background-size: cover;
   overflow: hidden;
+  background-image: linear-gradient(
+      0deg,
+      rgba(2, 0, 36, 0.2) 0%,
+      rgba(7, 7, 124, 0.2) 0%,
+      rgba(25, 30, 55, 0.5) 10%
+    ),
+    url(${img});
 `;
 export const Title = styled.h1`
   font-size: ${({ fontSize }) => fontSize};

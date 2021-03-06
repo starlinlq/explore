@@ -53,10 +53,11 @@ export const Menu = styled.div`
   @media screen and (max-width: 600px) {
     position: absolute;
     transition: 0.3s ease-in-out;
+    background: rgba(25, 30, 55, 0.9);
     opacity: ${({ mobile }) => (mobile ? "1" : "0")};
     top: 50px;
     width: ${({ mobile }) => (mobile ? "100%" : "0")};
-    background-color: #171d34;
+
     height: 400px;
     border-bottom-right-radius: 7px;
     border-bottom-left-radius: 7px;
@@ -67,6 +68,7 @@ export const Menu = styled.div`
       margin: auto;
       padding: 20px 0;
       font-size: 20px;
+      font-weight: 700;
     }
   }
 `;
