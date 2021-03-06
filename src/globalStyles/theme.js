@@ -4,7 +4,7 @@ export const GlobalStyle = createGlobalStyle`
 
 
 body {
-  background: rgba(25, 30, 55, 1);
+  background: rgba(25, 34, 55, 1);
     margin: 0;
     padding: 0;
     box-sizing: border-box;

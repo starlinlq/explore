@@ -7,9 +7,9 @@ export const Wrapper = styled.div`
   overflow: hidden;
   background-image: linear-gradient(
       0deg,
-      rgba(2, 0, 36, 0.2) 0%,
-      rgba(7, 7, 124, 0.2) 0%,
-      rgba(25, 30, 55, 0.5) 10%
+      rgba(25, 35, 55, 1) 1%,
+      rgba(25, 35, 55, 0.7) 12%,
+      rgba(25, 35, 55, 0.7) 5%
     ),
     url(${img});
 `;
