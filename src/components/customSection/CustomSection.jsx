@@ -1,11 +1,16 @@
 import React from "react";
 import { Container } from "../../globalStyles/theme";
 import Grid from "../grid/Grid";
+import { Wrapper, Title, SubTitle } from "./section.styles";
 
-const CustomSection = () => {
+const CustomSection = ({ title, subtitle, children }) => {
   return (
     <Container>
-      <Grid />
+      <Wrapper>
+        <Title>{title}</Title>
+        <SubTitle>{subtitle}</SubTitle>
+      </Wrapper>
+      {children}
     </Container>
   );
 };

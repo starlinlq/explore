@@ -8,9 +8,13 @@ import {
   Price,
   Time,
   Type,
+  Content,
+  Wrapper,
+  Icon,
 } from "./grid.styles";
 import "./styles.css";
 import Masonry from "react-masonry-css";
+import { IoTimerOutline, IoPricetagOutline } from "react-icons/io5";
 
 const data = [
   {
@@ -55,7 +59,7 @@ const data = [
     guide: "Tim Hendricks",
     type: "City Guide",
     img:
-      "https://images.pexels.com/photos/461956/pexels-photo-461956.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+      "https://images.pexels.com/photos/1703314/pexels-photo-1703314.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
   },
   {
     id: 5,
@@ -66,7 +70,7 @@ const data = [
     guide: "Tim Hendricks",
     type: "City Guide",
     img:
-      "https://images.pexels.com/photos/461956/pexels-photo-461956.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+      "https://images.pexels.com/photos/1755683/pexels-photo-1755683.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
   },
   {
     id: 6,
@@ -77,7 +81,7 @@ const data = [
     guide: "Tim Hendricks",
     type: "City Guide",
     img:
-      "https://images.pexels.com/photos/461956/pexels-photo-461956.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+      "https://images.pexels.com/photos/4245826/pexels-photo-4245826.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
   },
 ];
 
@@ -96,11 +100,27 @@ const Grid = () => {
         columnClassName="my-masonry-grid_column "
       >
         {data.map((content) => (
-          <Card
-            key={content.id}
-            height={content.height}
-            img={content.img}
-          ></Card>
+          <Card key={content.id} height={content.height} img={content.img}>
+            <Content>
+              <Title>{content.title}</Title>
+              <Wrapper>
+                <Price>
+                  <Icon>
+                    <IoPricetagOutline />
+                  </Icon>
+
+                  <span> {content.price}</span>
+                </Price>
+                <Time>
+                  <Icon>
+                    <IoTimerOutline />
+                  </Icon>
+
+                  <span> {content.time}</span>
+                </Time>
+              </Wrapper>
+            </Content>
+          </Card>
         ))}
       </Masonry>
     </Cards>

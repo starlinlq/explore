@@ -6,11 +6,12 @@ import {
   Title,
   SubTitle,
   Section,
-  Grid,
+  Row,
   Col,
   Select,
   Content,
 } from "./home.styles";
+import { Grid, Reviews } from "../";
 const Home = () => {
   return (
     <>
@@ -28,7 +29,7 @@ const Home = () => {
               <Button>Start to explore</Button>
             </div>
 
-            <Grid>
+            <Row>
               <Col>
                 <Content>
                   <Title fontSize="25px" fontMobile="16px">
@@ -62,12 +63,27 @@ const Home = () => {
                   <Select>Select tour</Select>
                 </Content>
               </Col>
-            </Grid>
+            </Row>
           </Section>
         </Container>
       </Wrapper>
       <div style={{ minHeight: "100vh" }}>
-        <CustomSection />
+        <CustomSection
+          title="Top Programs"
+          subtitle="Our programs are compiled by the best guides, 
+                    Each tourist will be able to choose a program according to their level"
+        >
+          {" "}
+          <Grid />
+        </CustomSection>
+      </div>
+      <div style={{ minHeight: "100vh" }}>
+        <CustomSection
+          title="Emotions are the best you can get in this life"
+          subtitle="Check out the reviwes of people who used our services"
+        >
+          <Reviews />
+        </CustomSection>
       </div>
     </>
   );

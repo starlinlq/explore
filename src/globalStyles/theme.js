@@ -18,12 +18,12 @@ a:link{
 }
 
 svg{
-  font-size: 25px;
+  font-size: 18px;
   color: lightgray;
 }
 
 p, h1, span{
-  letter-spacing: 0.7px;
+  letter-spacing: 0.8px;
 }
 
 

@@ -53,7 +53,7 @@ export const Select = styled.span`
     padding-bottom: 6px;
   }
 `;
-export const Grid = styled.div`
+export const Row = styled.div`
   display: flex;
   justify-content: space-between;
   margin-top: 8rem;
