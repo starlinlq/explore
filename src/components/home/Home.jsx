@@ -78,6 +78,12 @@ const Home = () => {
         </CustomSection>
       </div>
       <div style={{ minHeight: "100vh" }}>
+        <CustomSection title="Explore" subtitle="">
+          {" "}
+          <Grid />
+        </CustomSection>
+      </div>
+      <div style={{ minHeight: "100vh" }}>
         <CustomSection
           title="Emotions are the best you can get in this life"
           subtitle="Check out the reviwes of people who used our services"

@@ -1,8 +1,9 @@
 import React from "react";
 import { Container } from "../../globalStyles/theme";
 import img from "../../images/1.png";
-import { Content, Feed, Picture } from "./reviews.styles";
+import { Content, Feed, Picture, Quote, Icon, Text } from "./reviews.styles";
 import { useState, useEffect } from "react";
+import { ImQuotesLeft, ImQuotesRight } from "react-icons/im";
 
 const Reviews = () => {
   const contentData = {
@@ -12,7 +13,7 @@ const Reviews = () => {
         bottom: "",
         right: "",
         top: "200px",
-        left: "20px",
+        left: "50px",
         src:
           "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
       },
@@ -29,8 +30,8 @@ const Reviews = () => {
       {
         key: 3,
         top: "",
-        bottom: "100px",
-        right: "250px",
+        bottom: "170px",
+        right: "200px",
         left: "",
         src:
           "https://images.pexels.com/photos/943084/pexels-photo-943084.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
@@ -40,7 +41,7 @@ const Reviews = () => {
         key: 4,
         top: "150px",
         bottom: "",
-        right: "25px",
+        right: "55px",
         left: "",
         src:
           "https://images.pexels.com/photos/2406949/pexels-photo-2406949.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
@@ -81,7 +82,7 @@ const Reviews = () => {
         key: 8,
         top: "",
         bottom: "230px",
-        right: "300px",
+        right: "350px",
         left: "",
         src:
           "https://images.pexels.com/photos/943084/pexels-photo-943084.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
@@ -138,14 +139,28 @@ const Reviews = () => {
     <Content img={img}>
       <Feed>
         {data.map((content, i) => (
-          <Picture
-            key={content.key}
-            top={content.top}
-            right={content.right}
-            left={content.left}
-            bottom={content.bottom}
-            src={content.src}
-          />
+          <div key={content.key}>
+            <Picture
+              top={content.top}
+              right={content.right}
+              left={content.left}
+              bottom={content.bottom}
+              src={content.src}
+            >
+              <Quote>
+                <Icon>
+                  {" "}
+                  <ImQuotesLeft />
+                </Icon>
+                <Text>
+                  We wander for distraction, but we travel for fulfilment.
+                </Text>
+                <Icon>
+                  <ImQuotesRight />
+                </Icon>
+              </Quote>
+            </Picture>
+          </div>
         ))}
       </Feed>
     </Content>

@@ -10,14 +10,35 @@ export const Content = styled.div`
 `;
 
 export const Feed = styled.div``;
-export const Picture = styled.img`
+export const Quote = styled.div`
+  visibility: hidden;
+  display: flex;
+  position: relative;
+  bottom: 70px;
+  right: 110px;
+  width: 300px;
+  padding: 5px 0;
+  background: white;
+  border-radius: 7px;
+  text-align: center;
+  z-index: 999;
+
+  @media screen and (max-width: 600px) {
+    width: 210px;
+    right: 80px;
+    bottom: 100px;
+  }
+`;
+export const Picture = styled.div`
   position: absolute;
   top: ${({ top }) => top};
   left: ${({ left }) => left};
   right: ${({ right }) => right};
   bottom: ${({ bottom }) => bottom};
-  object-fit: cover;
-  object-position: center;
+
+  background-image: url(${({ src }) => src});
+  background-position: center;
+  background-size: cover;
   width: 70px;
   height: 70px;
   border-radius: 50%;
@@ -27,4 +48,15 @@ export const Picture = styled.img`
     width: 50px;
     height: 50px;
   }
+
+  &:hover {
+    ${Quote} {
+      visibility: visible;
+    }
+  }
 `;
+
+export const Icon = styled.div`
+  padding: 0 15px;
+`;
+export const Text = styled.span``;
