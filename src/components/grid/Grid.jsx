@@ -73,7 +73,7 @@ const data = [
       "https://images.pexels.com/photos/1755683/pexels-photo-1755683.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
   },
   {
-    id: 6,
+    id: 7,
     height: "450px",
     title: "The best of Zurich",
     price: "$80",
