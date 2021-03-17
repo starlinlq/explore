@@ -29,7 +29,7 @@ function Nav() {
     <Header>
       <Container>
         <NavBar>
-          <Link to="/">
+          <Link to="/explore">
             <Logo>EXPLORE</Logo>
           </Link>
           <IconWrapper onClick={handleMobile}>

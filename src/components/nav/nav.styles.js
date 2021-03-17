@@ -2,6 +2,7 @@ import styled, { keyframes } from "styled-components";
 
 export const NavBar = styled.nav`
   position: relative;
+  top: 0;
   display: flex;
   justify-content: space-between;
   height: 50px;

@@ -1,9 +1,15 @@
 import { GlobalStyle } from "./globalStyles/theme";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import { Nav, Home, Register, Login } from "./components";
+import { Explore, Nav, Home, Register, Login, Footer } from "./components";
 import { useEffect } from "react";
 import { authenticate } from "./stores/user/actions";
 import { useDispatch } from "react-redux";
+import styled from "styled-components";
+
+const Section = styled.div`
+  position: relative;
+  height: 100vh;
+`;
 
 function App() {
   const dispatch = useDispatch();
@@ -17,18 +23,24 @@ function App() {
     <>
       <GlobalStyle />
       <Router>
-        <Nav />
-        <Switch>
-          <Route path="/register">
-            <Register />
-          </Route>
-          <Route path="/login">
-            <Login />
-          </Route>
-          <Route path="/">
-            <Home />
-          </Route>
-        </Switch>
+        <Section>
+          <Nav />
+          <Switch>
+            <Route path="/register">
+              <Register />
+            </Route>
+            <Route path="/explore">
+              <Explore />
+            </Route>
+            <Route path="/login">
+              <Login />
+            </Route>
+            <Route path="/">
+              <Home />
+            </Route>
+          </Switch>
+          <Footer />
+        </Section>
       </Router>
     </>
   );

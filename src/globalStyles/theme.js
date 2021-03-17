@@ -5,12 +5,12 @@ export const GlobalStyle = createGlobalStyle`
 
 body {
   background: rgba(25, 34, 55, 1);
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    position: relative;
-    overflow-x: hidden !important;
-    
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  position: relative;
+  overflow-x: hidden !important;
+  
 }
 a:link{
   text-decoration: none!important;
