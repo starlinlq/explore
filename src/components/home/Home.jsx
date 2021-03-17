@@ -1,5 +1,6 @@
 import {} from "./home.styles";
-import { Container, Button } from "../../globalStyles/theme";
+import { Container, Button, A } from "../../globalStyles/theme";
+import { Link } from "react-router-dom";
 import { CustomSection } from "../";
 import {
   Wrapper,
@@ -26,7 +27,9 @@ const Home = () => {
                 Discover Canada, Choose the best programs, guides, hotels, and
                 restaurants.
               </SubTitle>
-              <Button>Start to explore</Button>
+              <Link to="/explore">
+                <A>Explore</A>
+              </Link>
             </div>
 
             <Row>

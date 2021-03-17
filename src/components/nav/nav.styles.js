@@ -13,7 +13,7 @@ export const NavBar = styled.nav`
 `;
 
 export const Header = styled.header`
-  position: absolute;
+  position: relative;
   top: 0;
   background-color: transparent;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);

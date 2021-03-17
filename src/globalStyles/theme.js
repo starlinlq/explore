@@ -87,3 +87,4 @@ export const Span = styled.span`
     color: #191e37;
   }
 `;
+export const A = styled(Button)``;
