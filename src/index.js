@@ -5,7 +5,7 @@ import { theme } from "./globalStyles/theme";
 import App from "./App";
 import { Provider } from "react-redux";
 import { store } from "./stores";
-
+//test
 ReactDOM.render(
   <ThemeProvider theme={theme}>
     <Provider store={store}>
