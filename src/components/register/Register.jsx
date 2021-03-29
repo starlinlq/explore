@@ -25,7 +25,7 @@ function Register() {
   const { register, handleSubmit, errors, clearErrors } = useForm();
   const dispatch = useDispatch();
   const { user } = useSelector((state) => state.user);
-
+ //register user //
   function onSubmit(data) {
     dispatch(register_user(data));
     if (user) {

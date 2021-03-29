@@ -23,7 +23,7 @@ import { useDispatch } from "react-redux";
 function Register() {
   const { register, handleSubmit, errors, clearErrors } = useForm();
   const dispatch = useDispatch();
-
+  //register user //
   function onSubmit(data) {
     dispatch(login_user(data));
     clearErrors();
